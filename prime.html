@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So nguyen to</title>
+</head>
+<body>
+<button onclick="inNum()">In</button>
+<script>
+    function isPrime(num){
+        if(num<2)return false;
+        if (num==2)return true;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if(num%i==0)return false;
+        }
+        return true;
+    }
+
+    function inNum() {
+        for (let i = 2; i <= 10000; i++) {
+            if (isPrime(i)) {
+                document.write(i + ', ')
+            }
+        }
+    }
+
+    // }
+    // function displayPrime() {
+    //     do{
+    //         let num=+prompt('nhap mot so');
+    //         if(num>10000){
+    //             alert('moi ban nhap lai');
+    //         }else{
+    //             if(isPrime(num)){
+    //                 alert(num + "la so nguyen to");
+    //             }
+    //             else{
+    //                 alert(num+"khong la so nguyen to");
+    //             }
+    //             return ;
+    //         }
+    //
+    //     }while (true)
+    //
+    // }
+    // displayPrime();
+</script>
+</body>
+</html>
